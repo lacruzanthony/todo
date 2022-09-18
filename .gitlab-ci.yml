@@ -17,9 +17,6 @@
 
 image: node:latest
 
-services:
-  - docker
-
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
@@ -27,6 +24,8 @@ stages:          # List of stages for jobs, and their order of execution
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
+  services:
+  - docker
   script:
     - cd server && docker build -t server/todo
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
