@@ -59,7 +59,7 @@ deploy-job:      # This job runs in the deploy stage.
     entrypoint: ['']
   script:
     - kubectl config get-contexts
-    - kubectl config use-context path/to/agent/repository:agent-name
+    - kubectl config use-context lacruzanthony20/learned-todo:todo-agent
     - kubectl get pods
     - echo "Deploying application..."
     - echo "Application successfully deployed."
