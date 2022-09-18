@@ -61,5 +61,5 @@ deploy-job:      # This job runs in the deploy stage.
     - kubectl config get-contexts
     - kubectl config use-context lacruzanthony20/learned-todo:todo-agent
     - kubectl get pods
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+    - doctl kubernetes cluster --help
+    
