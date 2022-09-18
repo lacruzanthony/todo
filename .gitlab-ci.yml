@@ -28,7 +28,6 @@ build-job:       # This job runs in the build stage, which runs first.
   services:
     - docker:dind
   script:
-    - cd server && npm i
     - cd server && docker build -t anthonyla/todo .
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - docker push anthonyla/todo
@@ -47,6 +46,7 @@ unit-test-job:   # This job runs in the test stage.
   dependencies:
     - build-job
   script:
+    - cd server && npm install
     - cd server && npm run test:ci
   artifacts:
     when: always
