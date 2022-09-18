@@ -24,8 +24,9 @@ stages:          # List of stages for jobs, and their order of execution
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
+  image: docker:latest
   services:
-  - docker
+    - docker:dind
   script:
     - cd server && docker build -t server/todo
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
