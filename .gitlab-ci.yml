@@ -25,7 +25,7 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - npm install
+    - cd server && npm install
   cache:
     paths:
       - node_modules/
@@ -41,16 +41,9 @@ unit-test-job:   # This job runs in the test stage.
   dependencies:
     - build-job
   script:
-    - npm run test:ci
+    - cd server && npm run test:ci
   artifacts:
     when: always
-
-lint-test-job:   # This job also runs in the test stage.
-  stage: test    # It can run at the same time as unit-test-job (in parallel).
-  script:
-    - echo "Linting code... This will take about 10 seconds."
-    - sleep 10
-    - echo "No lint issues found."
 
 deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
