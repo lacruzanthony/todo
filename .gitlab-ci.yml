@@ -47,7 +47,7 @@ unit-test-job:   # This job runs in the test stage.
     - build-job
   script:
     - cd server && npm install
-    - cd server && npm run test:ci
+    - npm run test:ci
   artifacts:
     when: always
 
