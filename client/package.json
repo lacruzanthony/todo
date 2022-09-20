@@ -1,0 +1,26 @@
+{
+  "name": "learned-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "json-server": "^0.13.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "production": "json-server --static ./build db.json",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "dev-server": "json-server -p 8080 db.json"
+  }
+}

@@ -5,6 +5,10 @@ import logger from 'morgan'
 import { json } from 'body-parser';
 import { Request, Response, NextFunction } from 'express';
 import { indexTodo } from './routes/index';
+import { createTodo } from './routes/new';
+import { deleteTodo } from './routes/delete';
+import { randomTodo } from './routes/random';
+import { updateTodo } from './routes/update';
 
 
 const app = express();
@@ -21,7 +25,10 @@ app.use(
 
 // TODO: add the new routes
 app.use(indexTodo);
-// app.use('/users', usersRouter);
+app.use(createTodo);
+app.use(deleteTodo);
+app.use(randomTodo);
+app.use(updateTodo);
 
 // catch 404 and forward to error handler
 app.use(function (_req: Request, _res: Response, next: NextFunction) {
