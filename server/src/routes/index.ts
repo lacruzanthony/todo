@@ -7,7 +7,7 @@ router.get('/api/todos', async (_req: Request, res: Response) => {
   const cache = cacheWrapper.client;
   cache.set("todos", [
     {
-      "name": "My first task",
+      "name": "Create todo list",
       "isComplete": true,
       "id": 16
     }]

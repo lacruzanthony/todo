@@ -2,7 +2,7 @@ import React from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { fetchTodos, toggleTodo, deleteTodo, getVisibleTodos } from '../reducers/todo'
+import { fetchTodos, toggleTodo, deleteTodo, getVisibleTodos, searchVisibibleTodos } from '../reducers/todo'
 
 const TodoItem = ({ number, id, name, isComplete, toggleTodo, deleteTodo }) => {
   const dispatch = useDispatch()
@@ -24,8 +24,11 @@ const TodoItem = ({ number, id, name, isComplete, toggleTodo, deleteTodo }) => {
 
 const TodoList = () => {
   const { filter } = useParams()
-  const todos = useSelector((state) => getVisibleTodos(state.todo.todos, filter))
   debugger;
+  const search = useSelector((state) => state.todo.searchTodo)
+  let todos = useSelector((state) => getVisibleTodos(state.todo.todos, filter))
+  todos = searchVisibibleTodos(todos, search)
+
   const dispatch = useDispatch()
   React.useEffect(() => {
     dispatch(fetchTodos())
@@ -46,6 +49,6 @@ const TodoList = () => {
 }
 
 export default connect(
-  (state, ownProps) => ({ todos: getVisibleTodos(state.todo.todos, ownProps.filter) }),
+  (state, ownProps) => ({ todos: getVisibleTodos(state.todo.todos) }),
   { fetchTodos, toggleTodo, deleteTodo }
 )(TodoList)

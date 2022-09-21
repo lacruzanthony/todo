@@ -15,7 +15,7 @@ router.put('/api/todos/:id', async (req: Request, res: Response) => {
     name: name,
     isComplete: !isComplete
   })
-  res.status(200).send({ todos: filteredTodos })
+  res.status(200).send(...filteredTodos)
 });
 
 export { router as updateTodo }

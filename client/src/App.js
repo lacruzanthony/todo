@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
