@@ -3,6 +3,6 @@ import { app } from "../../app";
 
 describe('index route', () => {
   it('Should return the TODO list', () => {
-    return request(app).get('/').expect(200)
+    return request(app).get('/api/todos').expect(200)
   })
 })
