@@ -65,4 +65,130 @@ The second input is for filtering the list.
 
 You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
 
+# Task completed
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+
+
+
+If you want to create a new item, you have to type inside the first input and hit enter.
+
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+# Task completed
+Create TODO list, so it has all the following features:
+- user see the list of tasks: (columns: No, Title, Status(done/not done)). By default list has
+only 1 task: (title “Create todo list”, status: done); ✅
+- user should be able to add new task to the list; ✅
+- user should be able to delete any task from the list; ✅
+- user should be able to search through the tasks (by name); ✅
+- user should be able to mark task as done or not done; ✅
+- when a user creates a new task - the name of the task should be proposed randomly. ❌
+For random task name use:
+- service from Back-end (Node.js | Express) part: fetch random task name.
+- or https://www.boredapi.com/api/activity (if you do not do Back-end (Node.js | Express)
+part).
+
+Back-end (Node.js | Express)
+Rules:
+- code should be located in repository (For instance: GitLab);
+- implement a project using Node.js | Express.
+- feel free to use any additional packages you need.
+- demonstrate/reveal all your knowledge in project implementation.
+(p.s. store list of task names in server memory, you do not need database for this)
+Service: fetch random task name.
+Create API using Node.js and Express with next functionality:
+- add new task name in the list; ✅
+- get random task name from the list; ✅
+- delete all task names from the list; ❌
+
 
