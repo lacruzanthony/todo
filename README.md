@@ -29,6 +29,8 @@ Once the image is build we can push it to our local Docker context:
 
 `Docker push anthonyla/server-todo`
 
+### Client service:
+
 Now we need to build the image for the client service. Get back to the `learned-todo` folder:
 
 `cd .. && cd client`
