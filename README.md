@@ -55,7 +55,7 @@ Now you can go to your browser and type in the URL: `localhost`
 
 This will show the TODO app:
 
-![Alt text](./todo-image "a title")
+![Alt text](./todo-image.png "a title")
 
 ### The application
 
