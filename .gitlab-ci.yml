@@ -51,15 +51,15 @@ unit-test-job:   # This job runs in the test stage.
   artifacts:
     when: always
 
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
-  image:
-    name: bitnami/kubectl:latest
-    entrypoint: ['']
-  script:
-    - kubectl config get-contexts
-    - kubectl config use-context lacruzanthony20/learned-todo:todo-agent
-    - kubectl get pods
-    - doctl kubernetes cluster --help
+# deploy-job:      # This job runs in the deploy stage.
+#   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+#   environment: production
+#   image:
+#     name: bitnami/kubectl:latest
+#     entrypoint: ['']
+#   script:
+#     - kubectl config get-contexts
+#     - kubectl config use-context lacruzanthony20/learned-todo:todo-agent
+#     - kubectl get pods
+#     - doctl kubernetes cluster --help
     
