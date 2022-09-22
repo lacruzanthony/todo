@@ -2,7 +2,7 @@
 
 This project is made by two services: client & server. To start the proyect we will need:
 - Docker, install windows version [here](https://docs.docker.com/desktop/install/windows-install/)
-- Skaffold, install windows version [here](https://skaffold.dev/docs/install/#). You will to update you env variables
+- Skaffold, install windows version [here](https://skaffold.dev/docs/install/#). You will to update your env variables after downloadin the `.exe` 
 - Node.js. [Install](https://nodejs.org/en/download/)
 - npm. It will be installed with Node.js
 
@@ -55,10 +55,14 @@ Now you can go to your browser and type in the URL: `localhost`
 
 This will show the TODO app:
 
-![Alt text](./todo-image.png "a title")
+![Todo image](./todo-image.png "a title")
 
-### The application
+# The application
 
 If you want to create a new item, you have to type inside the first input and hit enter.
 
-The second input is for filtering the list
+The second input is for filtering the list.
+
+You could delete each item individualy and mark it complete or incomplete. At the end of the list you will find some filter based on the status.
+
+
