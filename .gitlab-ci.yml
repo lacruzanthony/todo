@@ -24,8 +24,13 @@ stages:          # List of stages for jobs, and their order of execution
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
+  image: docker:latest
+  services:
+    - docker:dind
   script:
-    - cd server && npm install
+    - cd server && docker build -t anthonyla/todo .
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - docker push anthonyla/todo
   cache:
     paths:
       - node_modules/
@@ -41,13 +46,21 @@ unit-test-job:   # This job runs in the test stage.
   dependencies:
     - build-job
   script:
-    - cd server && npm run test:ci
+    - cd server
+    - npm install
+    - npm run test:ci
   artifacts:
     when: always
 
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
-  script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+# deploy-job:      # This job runs in the deploy stage.
+#   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+#   environment: production
+#   image:
+#     name: bitnami/kubectl:latest
+#     entrypoint: ['']
+#   script:
+#     - kubectl config get-contexts
+#     - kubectl config use-context lacruzanthony20/learned-todo:todo-agent
+#     - kubectl get pods
+#     - doctl kubernetes cluster --help
+    
