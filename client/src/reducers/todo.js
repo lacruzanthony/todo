@@ -35,23 +35,13 @@ export const saveTodo = (name) => {
   }
 }
 
-// export const saveSearch = (filter) => {
-//   debugger;
-//   return (dispatch, getState) => {
-//     dispatch(showMessage('Searching Todo'))
-//     const { todos } = getState().todo
-//     const todosFiltered = todos.filter(todo => todo.name.includes(filter))
-//     return todosFiltered
-//   }
-// }
-
 export const toggleTodo = (id) => {
   return (dispatch, getState) => {
-    debugger;
     dispatch(showMessage('Saving todo update'))
     const { todos } = getState().todo
     const todo = todos.find(t => t.id === id)
-    updateTodo(todo)
+    const toggled = { ...todo, isComplete: !todo.isComplete }
+    updateTodo(toggled)
       .then(res => dispatch(replaceTodo(res)))
   }
 }
@@ -83,7 +73,6 @@ export const getVisibleTodos = (todos, filter) => {
 }
 
 export default (state = initState, action) => {
-  debugger;
   switch (action.type) {
     case TODO_ADD:
       return { ...state, currentTodo: '', todos: state.todos.concat(action.payload) }
