@@ -2,7 +2,7 @@
 
 This project is made by two services: client & server. To start the proyect we will need:
 - Docker, install windows version [here](https://docs.docker.com/desktop/install/windows-install/)
-- Skaffold, install windows version [here](https://skaffold.dev/docs/install/#). You will to update your env variables after downloadin the `.exe` 
+- Skaffold, install windows version [here](https://skaffold.dev/docs/install/#). You will to update your env variables after download the `.exe`
 - Node.js. [Install](https://nodejs.org/en/download/)
 - npm. It will be installed with Node.js
 
