@@ -11,7 +11,6 @@ const TodoForm = ({ currentTodo, searchTodo, todos }) => {
   }
 
   const handleSubmit = (event) => {
-    debugger
     event.preventDefault()
     dispatch(saveTodo(currentTodo))
   }

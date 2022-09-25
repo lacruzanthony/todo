@@ -24,7 +24,6 @@ const TodoItem = ({ number, id, name, isComplete, toggleTodo, deleteTodo }) => {
 
 const TodoList = () => {
   const { filter } = useParams()
-  debugger;
   const search = useSelector((state) => state.todo.searchTodo)
   let todos = useSelector((state) => getVisibleTodos(state.todo.todos, filter))
   todos = searchVisibibleTodos(todos, search)
