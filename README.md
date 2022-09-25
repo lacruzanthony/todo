@@ -1,3 +1,13 @@
+# Running the client
+Running just the client you will need two terminal running on the `client` folder:
+- The first terminal will run the local db: `npm run dev-server`
+- Second one will run the React code: `npm run start`
+
+After running this two commands in separates terminal you could go to: `localhost:3000` and you should see the client running:
+
+![client-running](./image.png)
+
+
 # Before start 
 
 This project is made by two services: client & server. To start the proyect we will need:
