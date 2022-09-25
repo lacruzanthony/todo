@@ -1,54 +1,14 @@
 {
   "todos": [
     {
-      "name": "",
-      "isComplete": true,
-      "id": 16
-    },
-    {
-      "name": "aa",
-      "isComplete": true,
-      "id": 17
-    },
-    {
-      "name": "",
+      "name": "Create todo list",
       "isComplete": true,
       "id": 18
     },
     {
-      "name": "",
-      "isComplete": true,
+      "name": "Testing 2",
+      "isComplete": false,
       "id": 19
-    },
-    {
-      "name": "",
-      "isComplete": true,
-      "id": 20
-    },
-    {
-      "name": "",
-      "isComplete": false,
-      "id": 21
-    },
-    {
-      "name": "",
-      "isComplete": false,
-      "id": 22
-    },
-    {
-      "name": "",
-      "isComplete": false,
-      "id": 23
-    },
-    {
-      "name": "",
-      "isComplete": false,
-      "id": 24
-    },
-    {
-      "name": "aaa",
-      "isComplete": false,
-      "id": 25
     }
   ]
 }
