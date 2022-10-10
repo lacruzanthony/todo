@@ -4,11 +4,6 @@
       "name": "Create todo list",
       "isComplete": true,
       "id": 18
-    },
-    {
-      "name": "Testing 2",
-      "isComplete": false,
-      "id": 19
     }
   ]
 }
